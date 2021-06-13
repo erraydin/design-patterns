@@ -3,7 +3,7 @@ package Intro.SimUDuck.Ducks;
 import Intro.SimUDuck.Behaviors.Fly.FlyBehavior;
 import Intro.SimUDuck.Behaviors.Quack.QuackBehavior;
 
-public class Duck {
+public abstract class Duck {
     FlyBehavior flyBehavior;
     QuackBehavior quackBehavior;
 
@@ -18,5 +18,11 @@ public class Duck {
     }
     public void fly(){
         flyBehavior.fly();
+    }
+    public void setFlyBehavior(FlyBehavior fb) {
+        flyBehavior = fb;
+    }
+    public void setQuackBehavior(QuackBehavior qb) {
+        quackBehavior = qb;
     }
 }
